@@ -1,11 +1,13 @@
-let nombre = prompt("Ingrese su nombre y apellido:");
-if(nombre != ""){
-    alert(`Bienvenido ${nombre} a Distribuidora Gente Amiga`)
+function iniciar(){
+    let nombre = prompt("Ingrese su nombre y apellido:");
+    if(nombre != ""){
+        alert(`Bienvenido ${nombre} a Distribuidora Gente Amiga`)
+    }
+    else{
+        alert("Datos incorrectos, ingrese nuevamente su nombre ")
+        iniciar();
+    } 
 }
-else{
-    alert("Datos incorrectos, ingrese nuevamente su nombre ")
-}  
-
 
 const productos = [
     {id:1 ,nombre:"Picada Chica", precio:2900},
@@ -30,15 +32,17 @@ const productos = [
 
 let carrito = [];
 
+
 let listaProductos = ""
 productos.forEach((producto) => {
     listaProductos += (`${producto.id}: ${producto.nombre} precio:$ ${producto.precio} \n`)
 });
 
+
 function calcularTotal(){
     total = 0;
     carrito.forEach((producto) =>{
-        total += producto.precio
+        total += producto.precio;
     })
     return total;
 };
@@ -48,15 +52,15 @@ function menuInicio(){
     let activado = true;
 
     do {
-        let menu =  Number (prompt ("Ingrese la opcion deseada:\n1-Ver menu\n2-Finalizar compra"))
+        let menu =  Number (prompt ("Ingrese la opcion deseada:\n1-Ver menu\n2-Finalizar compra"));
     if(menu === 1){
-        let idProducto = Number(prompt(`Ingrese el producto que desea:\n${(listaProductos)}`))
+        let idProducto = Number(prompt(`Ingrese el producto que desea:\n${(listaProductos)}`));
         let productoExistente = productos.find((producto) => producto.id === idProducto);
         if(productoExistente){
-            carrito.push(productoExistente)
-            alert(productoExistente.nombre);
+            carrito.push(productoExistente);
+            alert(`Agregaste correctamente al carrito: ${productoExistente.nombre}`);
         } else{
-            alert("Ingreso un producto inexistente, intente nuevamente")
+            alert("Ingreso un producto inexistente, intente nuevamente");
         }
     }else{
         const menu2 = Number(prompt(`El total del carrito es de: $${calcularTotal()}.\nIngrese la opcion deseada:\n1-Seguir comprando\n2-Eliminar un producto\n3-Salir`));
@@ -64,10 +68,13 @@ function menuInicio(){
             case 1:
                 break;
             case 2:
-                let productoSeleccionado = Number(prompt(`Ingrese el producto que desea eliminar:\n${listaProductos}`));
-                let eliminarProducto = carrito.filter ((producto) => producto.id === productoSeleccionado);
-                if(eliminarProducto){
-                    carrito.splice(eliminarProducto,1)
+                let productosCarrito = carrito.map(producto => producto.id + "-" + producto.nombre ).join('\n');
+                let productoSeleccionado = Number(prompt(`Ingrese el producto que desea eliminar:\n${productosCarrito}`));
+                let eliminarProducto = carrito.filter((producto) => producto.id === productoSeleccionado);
+                let productoAEliminar = carrito.find(producto => producto.id === productoSeleccionado);
+            if(productoAEliminar){
+                    let indice = carrito.indexOf(eliminarProducto);
+                    carrito.splice(indice, 1);
                     alert("Producto eliminado del carrito");
                     break;
                 }
@@ -85,4 +92,5 @@ function menuInicio(){
     }
     } while (activado);
 }
+iniciar();
 menuInicio();
