@@ -179,7 +179,8 @@ ul {
 .productos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background-color: #8f0100; }
+  background-color: #8f0100;
+  margin: 0px 40px; }
   .productos .producto__tarjeta {
     border: 2px solid;
     border-color: #000;
@@ -261,7 +262,11 @@ ul {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      text-align: center; }
+      text-align: center;
+      margin: 20px;
+      border: 2px solid;
+      border-color: #00000037;
+      border-radius: 10px; }
       .carrito .carrito__contenedor .carrito__productos .carrito__producto img {
         width: 200px;
         border-radius: 30px;
