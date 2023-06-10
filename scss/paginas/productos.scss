@@ -33,6 +33,15 @@
             }
     }
 
+
+}
+@media(max-width:768px) {
+    .productos{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        background-color: #8f0100;
+        margin: 0px 40px;
+    }
 }
 .producto__menu{
     display: flex;
@@ -51,6 +60,16 @@
 @media(max-width:768px) {
     .producto__titulo{
         margin: 0px;
-        font-size: 6px;
+        font-size: 60px;
+    }
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        background-color: #8f0100;
+        margin: 0px 40px;
+    }
+    .producto__menu{
+        display: flex;
+        flex-direction: column;
     }
 }

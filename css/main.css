@@ -161,6 +161,7 @@ ul {
 
 @media (max-width: 768px) {
   .nosotros .nosotros__titulo {
+    padding-top: 100px;
     margin: 0px; }
   .nosotros .nosotros__tarjeta1 {
     flex-direction: column; }
@@ -203,6 +204,13 @@ ul {
       margin-bottom: 20px;
       width: 90%; }
 
+@media (max-width: 768px) {
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: #8f0100;
+    margin: 0px 40px; } }
+
 .producto__menu {
   display: flex;
   text-align: center;
@@ -220,7 +228,15 @@ ul {
 @media (max-width: 768px) {
   .producto__titulo {
     margin: 0px;
-    font-size: 6px; } }
+    font-size: 60px; }
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: #8f0100;
+    margin: 0px 40px; }
+  .producto__menu {
+    display: flex;
+    flex-direction: column; } }
 
 .carrito .carrito__titulo {
   text-align: center;
@@ -353,9 +369,11 @@ ul {
   order: 2; }
 
 @media (max-width: 768px) {
-  .sucursales__titulo {
+  .sucursales .sucursales__titulo {
     margin: 40px 0px 40px 0px;
-    padding: 0px; }
+    padding: 0px;
+    font-size: 60px;
+    text-align: center; }
   .sucursales .sucursales__tarjeta1 {
     display: flex;
     flex-direction: column; }
