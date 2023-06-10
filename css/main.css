@@ -309,3 +309,67 @@ ul {
 
 .carrito .disableb {
   display: none; }
+
+.sucursales .sucursales__titulo {
+  text-align: center;
+  padding: 30px;
+  font-size: 70px;
+  margin: 30px;
+  font-weight: bold;
+  color: #8f0100; }
+
+.sucursales .sucursales__tarjeta1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.sucursales .sucursales__texto1 {
+  padding: 20px;
+  font-size: 24px;
+  text-align: center; }
+
+.sucursales .sucursales__tarjeta2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #8f0100; }
+
+.sucursales .sucursales__texto2 {
+  color: #fff;
+  padding: 20px;
+  font-size: 24px;
+  order: 2;
+  text-align: center; }
+
+.sucursales .sucursales__mapa1 {
+  height: 380px;
+  padding: 30px; }
+
+.sucursales .sucursales__mapa2 {
+  height: 380px;
+  padding: 30px;
+  order: 2; }
+
+@media (max-width: 768px) {
+  .sucursales__titulo {
+    margin: 40px 0px 40px 0px;
+    padding: 0px; }
+  .sucursales .sucursales__tarjeta1 {
+    display: flex;
+    flex-direction: column; }
+  .sucursales .sucursales__mapa1 {
+    height: 360px;
+    width: 360px;
+    padding-left: 0px;
+    padding-right: 0px; }
+  .sucursales .sucursales__tarjeta2 {
+    display: flex;
+    flex-direction: column; }
+  .sucursales .sucursales__mapa2 {
+    height: 360px;
+    width: 360px;
+    order: 0;
+    padding-left: 0px;
+    padding-right: 0px; } }

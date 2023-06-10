@@ -8,6 +8,7 @@ const carritoProductos = document.querySelector("#carrito__productos")
 let botonEliminar = document.querySelector(".carrito__producto__eliminar")
 const botonVaciar = document.querySelector("#carrito__acciones__vaciar")
 const total = document.querySelector("#total")
+const botonComprar = document.querySelector("#boton__comprar")
 
 function cargarProductosCarrito(){
     if(productosCarrito && productosCarrito.length > 0){   
@@ -65,6 +66,23 @@ function cargarBotonesEliminar(){
 }
 
 function eliminarCarrito(e){
+
+    Toastify({
+    text: "Producto Eliminado",
+    duration: 3000,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+    background: "linear-gradient(to right, #8f0100, #fff)",
+    border: "2px solid",
+    borderColor: "#000",
+    borderRadius: "10px"
+    },
+    onClick: function(){} // Callback after click
+    }).showToast();
+
     const idBoton = e.currentTarget.id;
     const index = productosCarrito.findIndex(producto => producto.id === idBoton);
     
@@ -76,11 +94,38 @@ function eliminarCarrito(e){
 }
 
 botonVaciar.addEventListener("click",vaciarCarrito);
+botonComprar.addEventListener("click",comprarCarrito);
 
 function vaciarCarrito(e){
-    productosCarrito.length = 0;
-    localStorage.setItem("producto-carrito",JSON.stringify(productosCarrito));
-    cargarProductosCarrito();
+    
+    Swal.fire({
+        title: 'Desea vaciar su carrito?',
+        text: "Se eliminaran todos los elementos de carrito de compras!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, vaciar!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+                productosCarrito.length = 0;
+                localStorage.setItem("producto-carrito",JSON.stringify(productosCarrito));
+                cargarProductosCarrito();
+            Swal.fire(
+            'Se eliminaron todos los productos de tu carrito!'
+            )
+        }
+    });
+}
+
+function comprarCarrito(){
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Muchas gracias por su compra',
+        showConfirmButton: false,
+        timer: 1500
+    })
 }
 
 function actualizarTotal(){
