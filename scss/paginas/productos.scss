@@ -1,0 +1,56 @@
+.productos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #8f0100;
+    
+    
+    .producto__tarjeta{
+        border: 2px solid;
+        border-color: #000;
+        border-radius: 10px;
+        margin: 10px;
+        text-align: center;
+        background-color: #fff;
+        
+            .producto__img {
+                    max-width: 90%;
+                    border-radius: 30px;
+                    padding: 15px;
+                }
+            
+            .producto__nombre{
+                color: #000;
+                font-size: 35px;
+                width: 100%;
+            }
+            .producto__precio{
+                color: #000;
+                font-size: 25px;
+            }
+            .producto_boton{
+                margin-bottom: 20px;
+                width: 90%;
+            }
+    }
+
+}
+.producto__menu{
+    display: flex;
+    text-align: center;
+    padding-bottom: 30px;
+    justify-content: center;
+}
+.producto__titulo {
+    text-align: center;
+    padding: 30px;
+    font-size: 70px;
+    margin: 30px;
+    font-weight: bold;
+    color: #8f0100;
+}
+@media(max-width:768px) {
+    .producto__titulo{
+        margin: 0px;
+        font-size: 6px;
+    }
+}

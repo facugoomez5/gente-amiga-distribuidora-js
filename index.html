@@ -1,12 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-                  <script src="./main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Inicio|Gente Amiga, Distribuidora de fiambres</title>
+    <meta
+      name="description"
+      content="En Gente Amiga te contamos un poco sobre nosotros y con qué productos trabajamos"
+    />
+    <meta
+      name="keywords"
+      content="Fiambres, Quesos, Distribuidora Fiambres, Bebidas, Postres, Sandwiches, Picadas"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="shortcurt icon" href="./img/Logo gente amiga.png" />
+  </head>
+  <body>
+      <header id="header">
+        <div class="menu">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                <a href="./index.html" ><img src="./img/Logo gente amiga.png" alt="Logo Gente Amiga" class="menu__img navbar-brand"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a href="#Nosotros" class="menu__enlace nav-link">Nosotros</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#Productos" class="menu__enlace nav-link">Productos</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="" class="menu__enlace nav-link">Sucursales</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <a href="./paginas/carrito.html" class="menu__enlace__carrito nav-link"><i class="bi bi-cart2"><span id="contador" class="contador">0</span></i></a>
+                </div>
+              </nav>
+          </div>
+    </header>
+    <main>
+      <section id="Nosotros" class="nosotros">
+        <h1 class="nosotros__titulo">Nosotros</h1>
+            <div class="nosotros__tarjeta1">
+                <img src="./img/jefes1.jpg" alt="jefes">
+                <p class="nosotros__texto1">Gente Amiga está conformada por un grupo de amigos de toda la vida,Pedro Álvarez, Nicolás Jaraba, Miguel Quatrocchi y Santiago Jaraba. Apostaron a ser "Gente Amiga" tanto con su equipo de trabajo, como con proveedores y clientes. Creen en la palabra y en el trabajo y la planificación como base de todo”</p>
+            </div>
+            <div class="nosotros__tarjeta2">
+                <img src="./img/empleados.jpg" alt="empleados">
+                <p class="nosotros__texto2">Gente Amiga tiene 3 unidades de negocios bien diferenciadas: minorista, mayorista y venta a empresas. La primera, es la unidad que denominan “almacén de fiambres” donde se pueden encontrar principalmente fiambres, quesos, delicatessen, bebidas, lácteos, entre otros, y el producto estrella son las famosas picadas. La segunda unidad se centra específicamente en fiambres y quesos. La tercera, y última unidad, está centrada en todo lo que es regalos empresariales, cajas navideñas, eventos y regalos para fechas especiales. </p>
+            </div>
+      </section>
+      <section id="Productos">
+        <h1 id="producto__titulo" class="producto__titulo">Todos los productos</h1>
+        <nav class="producto__menu">
+          <li><button id="todos" class="producto__boton__categoria boton1">Todos los productos</button></li>
+          <li><button id="picadas" class="producto__boton__categoria boton1">Picadas</button></li>
+          <li><button id="sandwich" class="producto__boton__categoria boton1">Sandwiches</button></li>
+          <li><button id="box" class="producto__boton__categoria boton1">Box regalos</button></li>
+          <li><button id="postre" class="producto__boton__categoria boton1">Postres</button></li>
+          <li><button id="sorrentinos" class="producto__boton__categoria boton1">Sorrentinos</button></li>
+        </nav>
+        <div id ="listaProductos" class="productos">
+        </div>
+      </section>
+
+    </main>
+    <footer id="redes">
+        <div class="footer">
+            <ul class="footer__ul">
+                <li><a href="""><img src="./img/mapa.png" alt="" class="footer__img">Sucursales</a></li>
+                <li><a href=""><img src="./img/whatsapp.png" alt="" class="footer__img">0351 384-4362</a></li>
+                <li><a href="https://www.facebook.com/Genteamigadistribuidora" target="_blank" ><img src="./img/facebook.png" alt="" class="footer__img">/Genteamigadistribuidora</a></li>
+                <li><a href="https://www.instagram.com/genteamigadistribuidora/?hl=es" target="_blank"><img src="./img/instagram.png" alt="" class="footer__img">@genteamigadistribuidora</a></li>
+                <li><a href=""><img src="./img/email.png" alt="" class="footer__img">genteamigadistribuidora@gmail.com</a></li>
+            </ul>
+            <p class="footer__copy">©️Derechos Reservados Facundo Gomez 2023</p>
+        </div>
+    </footer>
+    <script
+      src="app.js"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

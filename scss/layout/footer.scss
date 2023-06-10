@@ -1,0 +1,32 @@
+.footer {
+    a {
+        color: #000;
+    }
+
+    .footer__ul {
+        padding: 50px 40px 40px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer__copy {
+        text-align: end;
+        padding: 15px;
+        background-color: #8f0100;
+        color: white;
+        margin: 0px;
+    }
+
+    @media(max-width:768px) {
+        .footer__copy {
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+}
