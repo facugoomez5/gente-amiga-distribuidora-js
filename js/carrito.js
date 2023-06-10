@@ -97,23 +97,10 @@ botonVaciar.addEventListener("click",vaciarCarrito);
 botonComprar.addEventListener("click",comprarCarrito);
 
 function vaciarCarrito(){
-    
-    Swal.fire({
-        title: 'Desea vaciar su carrito?',
-        text: "Se eliminaran todos los elementos de carrito de compras!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, vaciar!'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            productosCarrito.length = 0;
-            localStorage.setItem("producto-carrito",JSON.stringify(productosCarrito));
-            cargarProductosCarrito();
-            Swal.fire('Se eliminaron todos los productos de tu carrito!')
-        }
-    });
+
+    productosCarrito.length = 0;
+    localStorage.setItem("producto-carrito",JSON.stringify(productosCarrito));
+    cargarProductosCarrito();
 }
 
 function comprarCarrito(){
