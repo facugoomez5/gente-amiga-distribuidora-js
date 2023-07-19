@@ -63,6 +63,10 @@
                     width: 160px;
                     
                 }
+                @media(max-width:768px) {
+                display: flex;
+                flex-direction: row;
+                }
                 
             }
         }

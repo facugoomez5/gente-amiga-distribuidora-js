@@ -295,6 +295,10 @@ ul {
         margin-right: 15px; }
       .carrito .carrito__contenedor .carrito__productos .carrito__producto .carrito__producto__nombre {
         width: 160px; }
+      @media (max-width: 768px) {
+        .carrito .carrito__contenedor .carrito__productos .carrito__producto {
+          display: flex;
+          flex-direction: row; } }
   .carrito .carrito__contenedor .carrito__acciones {
     display: flex;
     justify-content: space-between;

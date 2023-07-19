@@ -25,19 +25,19 @@ function cargarProductosCarrito(){
         div.innerHTML = `
         <img src=".${producto.img}" alt="${producto.nombre}">
         <div class = "carrito__producto__nombre">
-            <h3>Nombre</h3>
+            <h3>Nombre:</h3>
             <h2>${producto.nombre}</h2>
         </div>  
         <div class="carrito__producto__cantidad">
-            <h3>Cantidad</h3>
+            <h3>Cantidad:</h3>
             <h2>${producto.cantidad}</h2>
         </div>
         <div class="carrito__producto__precio">
-            <h3>Precio</h3>
-            <h2>${producto.precio}</h2>
+            <h3>Precio:</h3>
+            <h2>$${producto.precio}</h2>
         </div>
         <div class="carrito__producto__subtotal">
-            <h3>SubTotal</h3>
+            <h3>SubTotal:</h3>
             <h2>$${producto.precio * producto.cantidad}</h2>
         </div>
         <button id="${producto.id}" class="carrito__producto__eliminar"><i class="bi bi-trash"></i></button>
@@ -71,11 +71,11 @@ function eliminarCarrito(e){
     text: "Producto Eliminado",
     duration: 3000,
     close: true,
-    gravity: "top", // `top` or `bottom`
-    position: "right", // `left`, `center` or `right`
+    gravity: "bottom", // `top` or `bottom`
+    position: "left", // `left`, `center` or `right`
     stopOnFocus: true, // Prevents dismissing of toast on hover
     style: {
-    background: "linear-gradient(to right, #8f0100, #fff)",
+    background: "#8f0100",
     border: "2px solid",
     borderColor: "#000",
     borderRadius: "10px"

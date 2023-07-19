@@ -73,11 +73,11 @@ function agregarCarrito(e){
     text: "Producto Agregado",
     duration: 3000,
     close: true,
-    gravity: "top", // `top` or `bottom`
-    position: "right", // `left`, `center` or `right`
+    gravity: "bottom", // `top` or `bottom`
+    position: "left", // `left`, `center` or `right`
     stopOnFocus: true, // Prevents dismissing of toast on hover
     style: {
-    background: "linear-gradient(to right, #8f0100, #fff)",
+    background: "#8f0100",
     border: "2px solid",
     borderColor: "#000",
     borderRadius: "10px"
